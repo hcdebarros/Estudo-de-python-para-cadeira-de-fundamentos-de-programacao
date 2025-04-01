@@ -289,3 +289,5 @@
 
 tipo = str(input("Insira o tipo de produto: \n eletrônico \n vestuário \n livro"))
 sub_tip = str(input("Insira o subtipo do produto"))
+
+
