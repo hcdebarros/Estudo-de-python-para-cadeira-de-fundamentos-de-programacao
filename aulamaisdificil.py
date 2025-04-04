@@ -150,15 +150,15 @@
 
 # if ladoa + ladob <= ladoc:
 #     print("Não é um triângulo")
-#     exit()
+   
 
 # if ladoa + ladoc <= ladob:
 #     print("Não é um triângulo")
-#     exit()
+    
 
 # if ladob + ladoc <= ladoa:
 #     print("Não é um triângulo")
-#     exit()
+    
 
 # if ladoa == ladob == ladoc:
 #     print("É um triângulo equilátero")
