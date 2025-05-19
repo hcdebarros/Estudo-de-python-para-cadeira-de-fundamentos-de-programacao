@@ -25,7 +25,7 @@ dicionario = {}
 for i in range(20):
     chave = produtos[i] # chave será o termo na lista de produtos no espaço do valor de 'i'
     valor = precos[i] # valor será o termo na lista de preços no espaço do valor de 'i'
-    dicionario[chave] = valor # chave será a key e o value vai ser o value
+    dicionario[chave] = valor # chave será a key e o value vai ser o valor
 
 print(dicionario)
 
