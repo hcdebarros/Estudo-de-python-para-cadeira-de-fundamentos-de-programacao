@@ -24,12 +24,12 @@ livros = [
 livros_separados = {}
 
 for livro in livros:
-    genero = livro["genero"]
-    titulo = livro["titulo"]
+    genero = livro["genero"] # nomeando o genero c o nome q tem em cada genero
+    titulo = livro["titulo"] # msm coisa so q pro titulo
 
     if genero not in livros_separados:
-        livros_separados[genero] = []
+        livros_separados[genero] = [] # se n tiver a lista criada do genero, ele cria
     
-    livros_separados[genero].append(titulo)
+    livros_separados[genero].append(titulo) # na lista criada, na key genero ele adiciona o filme como value
 
 print(livros_separados)

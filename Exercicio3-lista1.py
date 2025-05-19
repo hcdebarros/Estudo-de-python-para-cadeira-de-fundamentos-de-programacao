@@ -22,8 +22,8 @@ produtos = [
 
 produtos_no_preco = []
 
-for i in produtos:
-    valor = list(i.values())[0]
+for i in produtos: # vai percorrer a lista de produtos
+    valor = list(i.values())[0] # ele vai pegar cada dicionario dentro de produtos, depois vai pegar os valores do dicionario(mais especificamete o termo 0) 
     if minimo < valor < maximo:
         produtos_no_preco.append(i)
 

@@ -31,8 +31,8 @@ alunos = {
     'Tiago': [6.0, 5.5, 6.5, 6.0]
 }
 
-for nome, notas in alunos.items():
-    media = sum(notas)/len(notas)
+for nome, notas in alunos.items(): # vai percorrer cada key e cada value do dicionario, nome(keys) e notas(values)
+    media = sum(notas)/len(notas) # vai somar as notas e dividir pelo tamanho da lista
     if media >= maior_media:
         maior_media = media
         nome_media = nome
