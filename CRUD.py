@@ -20,7 +20,7 @@ def menu_principal():
         else:
             print("Opção inválida.")
 
-# CRUD USUÁRIOS
+# Menu de usuários
 def menu_usuarios():
     while True:
         print("\n--- MENU USUÁRIOS ---")
@@ -60,7 +60,7 @@ def adicionar_usuario():
         "profissao": profissao,
         "apto": verificar_aptidao_usuario(idade, renda),
         "local_designado": endereco if verificar_aptidao_usuario(idade, renda) else "N/A",
-        "prazo_comparecimento": (datetime.date.today() + datetime.timedelta(days=30)).isoformat() if verificar_aptidao_usuario(idade, renda) else "N/A"
+        "prazo_comparecimento": (datetime.date.today() + datetime.timedelta(days=15)).isoformat() if verificar_aptidao_usuario(idade, renda) else "N/A"
     }
 
     usuarios[nome] = usuario
@@ -83,7 +83,7 @@ def atualizar_usuario():
         renda = input(f"Nova renda (atual: {usuarios[nome]['renda']}): ")
         if renda: usuarios[nome]['renda'] = float(renda)
 
-        # Atualiza os campos calculados
+        
         usuarios[nome]['apto'] = verificar_aptidao_usuario(usuarios[nome]['idade'], usuarios[nome]['renda'])
         usuarios[nome]['local_designado'] = usuarios[nome]['endereco'] if usuarios[nome]['apto'] else "N/A"
         usuarios[nome]['prazo_comparecimento'] = (datetime.date.today() + datetime.timedelta(days=30)).isoformat() if usuarios[nome]['apto'] else "N/A"
@@ -99,9 +99,9 @@ def remover_usuario():
         print("Usuário não encontrado.")
 
 def verificar_aptidao_usuario(idade, renda):
-    return idade >= 18 and renda <= 3000  # exemplo de critério
+    return idade >= 18 and renda <= 2000  
 
-# CRUD LOCAIS
+# Menu de locais
 def menu_locais():
     while True:
         print("\n--- MENU LOCAIS ---")
@@ -181,7 +181,7 @@ def remover_local():
         print("Local não encontrado.")
 
 def calcular_capacidade_producao(andares, area):
-    return andares * area * 2  # Fórmula de exemplo
+    return andares * area * 2  
 
-# Iniciar o sistema
+
 menu_principal()
